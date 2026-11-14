@@ -2,17 +2,6 @@
   "name": "opencode-beads_rust-stats-sidebar",
   "version": "1.0.0",
   "description": "OpenCode V2 plugin that displays beads_rust (br) issue statistics, ready-to-close epics, and active in_progress tasks in the TUI sidebar.",
-  "type": "module",
-  "license": "MIT",
-  "author": "Alexey M (https://github.com/melik)",
-  "homepage": "https://github.com/melik/opencode-beads_rust-stats-sidebar#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/melik/opencode-beads_rust-stats-sidebar.git"
-  },
-  "bugs": {
-    "url": "https://github.com/melik/opencode-beads_rust-stats-sidebar/issues"
-  },
   "keywords": [
     "opencode",
     "opencode-plugin",
@@ -22,6 +11,23 @@
     "solidjs",
     "typescript"
   ],
+  "homepage": "https://github.com/melik/opencode-beads_rust-stats-sidebar#readme",
+  "bugs": {
+    "url": "https://github.com/melik/opencode-beads_rust-stats-sidebar/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/melik/opencode-beads_rust-stats-sidebar.git"
+  },
+  "license": "MIT",
+  "author": "Alexey M (https://github.com/melik)",
+  "type": "module",
+  "exports": {
+    ".": "./index.ts",
+    "./tui": "./tui.tsx",
+    "./rpc": "./rpc.ts"
+  },
+  "main": "index.js",
   "files": [
     "index.ts",
     "tui.tsx",
@@ -31,14 +37,6 @@
     "i18n.ts",
     "README.md"
   ],
-  "exports": {
-    ".": "./index.ts",
-    "./tui": "./tui.tsx",
-    "./rpc": "./rpc.ts"
-  },
-  "engines": {
-    "node": ">=22.6.0"
-  },
   "scripts": {
     "test": "node --test beads.test.ts display.test.ts i18n.test.ts",
     "typecheck": "tsc --noEmit",
@@ -47,13 +45,16 @@
   "dependencies": {
     "@opencode/plugin": "latest"
   },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "@types/node": "^22.0.0"
+  },
   "peerDependencies": {
     "@opentui/core": ">=0.6.6",
     "@opentui/solid": ">=0.6.6",
     "solid-js": ">=1.9.0"
   },
-  "devDependencies": {
-    "typescript": "^5.6.0",
-    "@types/node": "^22.0.0"
+  "engines": {
+    "node": ">=22.6.0"
   }
 }
