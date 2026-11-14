@@ -1,6 +1,6 @@
 {
   "name": "opencode-beads_rust-stats-sidebar",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "OpenCode V2 plugin that displays beads_rust (br) issue statistics, ready-to-close epics, and active in_progress tasks in the TUI sidebar.",
   "keywords": [
     "opencode",
@@ -35,10 +35,11 @@
     "beads.ts",
     "display.ts",
     "i18n.ts",
+    "tsconfig.json",
     "README.md"
   ],
   "scripts": {
-    "test": "node --test beads.test.ts display.test.ts i18n.test.ts",
+    "test": "node --test beads.test.ts display.test.ts i18n.test.ts package.test.ts",
     "typecheck": "tsc --noEmit",
     "prepublishOnly": "npm test && npm run typecheck"
   },
