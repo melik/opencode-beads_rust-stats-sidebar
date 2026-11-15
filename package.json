@@ -1,7 +1,7 @@
 {
   "name": "opencode-beads_rust-stats-sidebar",
-  "version": "1.0.1",
-  "description": "OpenCode V2 plugin that displays beads_rust (br) issue statistics, ready-to-close epics, and active in_progress tasks in the TUI sidebar.",
+  "version": "1.2.0",
+  "description": "OpenCode V2 plugin that displays beads_rust (br) issue statistics, a focused epic with its tasks, and ready-to-close epics in the TUI sidebar.",
   "keywords": [
     "opencode",
     "opencode-plugin",
