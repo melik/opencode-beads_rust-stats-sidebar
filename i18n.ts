@@ -1,26 +1,15 @@
 type Language = "ru" | "en"
 
-const ruEpicsReady = (count: number) => {
-  const mod100 = count % 100
-  const mod10 = count % 10
-  const form = mod10 === 1 && mod100 !== 11
-    ? "эпик"
-    : mod10 >= 2 && mod10 <= 4 && (mod100 < 12 || mod100 > 14)
-      ? "эпика"
-      : "эпиков"
-  return `${count} ${form} ${form === "эпик" ? "готов" : "готовы"} к закрытию`
-}
-
 const translations = {
   ru: {
     total: (count: number) => `Всего задач: ${count}`,
     statuses: ["Открыто", "В работе", "Блокировано", "Закрыто"],
-    epicsReady: ruEpicsReady,
+    epicsReady: (count: number) => `Эпики готовые к закрытию: ${count}`,
   },
   en: {
     total: (count: number) => `Total tasks: ${count}`,
     statuses: ["Open", "In progress", "Blocked", "Closed"],
-    epicsReady: (count: number) => `${count} ${count === 1 ? "epic" : "epics"} ready to close`,
+    epicsReady: (count: number) => `Epics ready to close: ${count}`,
   },
 }
 

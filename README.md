@@ -9,42 +9,41 @@ An OpenCode V2 plugin that displays [beads_rust](https://github.com/Dicklesworth
 - The total number of tasks.
 - Counts of open, in-progress, blocked, and closed tasks.
 - A 10-character bar and percentage of the total for each category.
-- A `2 epics ready to close` line (or `2 эпика готовы к закрытию` for the Russian locale) when epics have all their child tasks closed. This line appears only when the count is positive, after the statistics.
+- An `Epics ready to close: 2` line (or `Эпики готовые к закрытию: 2` for the Russian locale) when epics have all their child tasks closed. This line appears only when the count is positive, after the statistics.
 - Exactly one current-task block below the statistics. The current task is the most recently updated in-progress task, or, when nothing is in progress, the most recently closed task.
 - If the current task belongs to an open epic, the block shows that epic: a `▼ <epic-id> <percent>% (<done>/<total>)` summary line followed by its child tasks.
 - Otherwise the block shows the current task as a single row: `[✓] Title` for a closed task or `[◐] Title` for an in-progress task.
 - A status glyph before each task: `✓` closed, `◐` in progress, `○` ready, `●` blocked, `❄` deferred. Blocked is inferred for open epic children that are absent from `br ready --json`.
 
-Example:
+Example: tasks in an epic
 
 ```text
 Beads
-Total tasks: 18
-Open        ■■■■■■□□□□ 11 (61%)
-In progress ■□□□□□□□□□ 1 (6%)
-Blocked     ■■■■■■□□□□ 10 (56%)
-Closed      ■■■□□□□□□□ 6 (33%)
-2 epics ready to close
+Total tasks: 8
+Open        ■■■■■□□□□□ 4 (50%)
+In progress ■■■□□□□□□□ 2 (25%)
+Blocked     ■■■□□□□□□□ 2 (25%)
+Closed      ■□□□□□□□□□ 1 (13%)
 
-▼ rtr-e6 45% (5/11)
-[✓] T56 — End-to-end authentication flow
-[○] T57 — Public access and revocation
-[◐] T58 — Comment moderation
-[●] T59 — Rate limits and concurrency
+▼ opencode-e2-auth-5u3 20% (1/5)
+[✓] End-to-end authentication flow
+[○] Public access and revocation
+[◐] Comment moderation
+[●] Rate limits and concurrency
+[❄] Deferred email notifications
 ```
 
-When the current task does not belong to an epic, the block is a single row:
+Example: a single current task
 
 ```text
 Beads
-Total tasks: 18
-Open        ■■■■■■□□□□ 11 (61%)
-In progress ■□□□□□□□□□ 1 (6%)
-Blocked     ■■■■■■□□□□ 10 (56%)
-Closed      ■■■□□□□□□□ 6 (33%)
-1 epic ready to close
+Total tasks: 8
+Open        ■■■■■□□□□□ 4 (50%)
+In progress ■■■□□□□□□□ 2 (25%)
+Blocked     ■■■□□□□□□□ 2 (25%)
+Closed      ■□□□□□□□□□ 1 (13%)
 
-[◐] T60 — Fix retry loop
+[◐] Fix retry loop
 ```
 
 ## How it works
