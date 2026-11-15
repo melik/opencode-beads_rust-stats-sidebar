@@ -1,5 +1,7 @@
 # opencode-beads_rust-stats-sidebar
 
+[![npm version](https://img.shields.io/npm/v/opencode-beads_rust-stats-sidebar)](https://www.npmjs.com/package/opencode-beads_rust-stats-sidebar)
+
 Плагин для OpenCode V2, который показывает статистику [beads_rust](https://github.com/Dicklesworthstone/beads_rust) и текущую задачу, либо эпик, к которому она относится, в боковой панели терминального интерфейса.
 
 ## Что отображается

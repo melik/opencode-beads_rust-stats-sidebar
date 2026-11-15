@@ -1,5 +1,7 @@
 # opencode-beads_rust-stats-sidebar
 
+[![npm version](https://img.shields.io/npm/v/opencode-beads_rust-stats-sidebar)](https://www.npmjs.com/package/opencode-beads_rust-stats-sidebar)
+
 [Русская версия](https://github.com/melik/opencode-beads_rust-stats-sidebar/blob/main/README.ru.md)
 
 An OpenCode V2 plugin that displays [beads_rust](https://github.com/Dicklesworthstone/beads_rust) statistics and the current task, or the epic it belongs to, in the terminal UI sidebar.
